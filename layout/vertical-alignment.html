@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+    .container{
+        border:1px solid aqua;
+    }
+
+    /* rowの高さが無いとalignが指定できない */
+    .row{
+        height:8rem;
+    }
+    </style>
+    
+</head>
+<body>
+    <h3>垂直上揃え：align-items-start</h3>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div>
+
+    <h3>垂直中央揃え：align-items-center</h3>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div>
+
+    <h3>垂直下揃え：align-items-end</h3>
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
