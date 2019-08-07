@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .container{
+            border:1px solid aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        水平方向への要素整列
+     -->
+    <h3>左揃え</h3>
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+        </div>
+    </div>
+    <h3>中央揃え</h3>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+        </div>
+    </div>
+    <h3>右揃え</h3>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+        </div>
+    </div>
+    <h3>等間隔に配置</h3>
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+        </div>
+    </div>
+    <h3>両端から均等</h3>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+</body>
+</html>
