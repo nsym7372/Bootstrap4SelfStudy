@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- 
+        abbr:マウスポインタを合わせた際に、説明文を表示
+        class=initialismで小さくなるとのことだが、違いがわからない
+     -->
+    <p><abbr title="HyperTextMarkupLanguage">HTML</abbr></p>
+    <p><abbr title="HyperTextMarkupLanguage" class="initialism">HTML</abbr></p> 
+
+    <!-- 
+        blockquote（要素、クラス）：引用文
+        blockquote要素内のfooter要素に、blockquote-footerクラスを追加し、cite要素としてマークアップ
+        blockquote-footer：フォントサイズ80%、文字色グレー
+     -->
+     <p>引用文の例を見てみましょう</p>
+     <blockquote class="blockquote">
+        <p class="mb-0">基本の引用文です</p>
+        <footer class="blockquote-footer">文章の<cite title="引用元の名前">引用元</cite>が明示できます</footer>    
+    </blockquote>
+
+    <!-- 引用文を中央寄せ -->
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">基本の引用文です</p>
+        <footer class="blockquote-footer">文章の<cite title="引用元の名前">引用元</cite>が明示できます</footer>    
+    </blockquote>
+
+    <!-- 引用文を右寄せ -->
+    <blockquote class="blockquote text-right">
+            <p class="mb-0">基本の引用文です</p>
+            <footer class="blockquote-footer">文章の<cite title="引用元の名前">引用元</cite>が明示できます</footer>    
+    </blockquote>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+</body>
+</html>

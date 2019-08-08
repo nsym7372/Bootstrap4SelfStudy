@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+    img{
+        width:200px;
+        height: auto;
+    }
+    </style>
+</head>
+
+<body>
+    <!--     
+        画面サイズに応じて、画像サイズを変更
+        max-width:100%, height:auto
+     -->
+    <h3 class="mb-4">レスポンシブ画像(img-fluid)</h3> <!-- mb-4 = margin-bottom:4 -->
+    <img src="../../img/sample.jpg" alt="レスポンシブ画像" class="img-fluid" style="width: 50%; height: auto">
+    <img src="../../img/sample.jpg" alt="サムネイル画像" class="img-thumbnail"> <!-- サムネイル用　1pxの角丸枠を表示-->
+
+    <!-- 
+        floatで画像を左右に配置
+     -->
+    <div class="clearfix">
+        <img src="../../img/sample.jpg" alt="左揃え" class="rounded float-left">
+        <img src="../../img/sample.png" alt="右揃え" class="rounded float-right">
+    </div>
+
+    <!-- 
+        text-centerで中央寄せ
+        (親要素から指定)
+     -->
+    <div class="text-center"><img src="../../img/sample.png" alt="中央" style="border:1px solid red"></div>
+
+    <!-- 
+        mx-autoで中央寄せ
+        imgはd-block（display:block）を利用、親要素不要
+     -->
+     <img src="../../img/sample.png" alt="中央寄せ" class="rounded mx-auto d-block" style="border:1px solid aqua">
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+</body>
+</html>

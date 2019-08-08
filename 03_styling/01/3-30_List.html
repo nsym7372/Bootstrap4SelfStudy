@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!-- 
+        リスト　リストマーカーとパディングを削除
+        list-unstyledを指定した直下の要素のみ適用
+     -->
+     <ul class="list-unstyled">
+            <li>リストマーカーなし</li>
+            <li>リストマーカーなし
+                <ul>
+                    <li>ネストされたリスト項目</li>
+                    <li>ネストされたリスト項目</li>
+                    <li>ネストされたリスト項目</li>
+                </ul>
+            </li>
+            <li>リストマーカーなし</li>
+            <li>リストマーカーなし</li>
+        </ul>
+   
+    <!-- 
+        リスト インラインリスト（横並び）
+    -->
+    <ul class="list-inline">
+        <li class="list-inline-item">インラインリスト項目</li>
+        <li class="list-inline-item">インラインリスト項目</li>
+        <li class="list-inline-item">インラインリスト項目</li>
+    </ul>
+
+    <!-- 
+        定義リスト：用語（dt）と説明（dd）を水平に揃える
+        おまけ＞長い用語を途中で省略：text-truncate
+     -->
+     <dl class="row">
+         <dt class="col-sm-3">用語1</dt>
+         <dd class="col-sm-9">用語1の説明</dd>
+         <dt class="col-sm-3 text-truncate">用語2の長い説明は切り捨てて省略</dt>
+         <dd class="col-sm-9">用語2の説明</dd>
+         <dt class="col-sm-3">用語3</dt>
+         <dd class="col-sm-9">
+             <dl class="row">
+                 <dt class="col-sm-4">ネストされた用語4</dt>
+                 <dd class="col-sm-8">ネストされた用語4の説明</dd>
+             </dl>
+         </dd>
+     </dl>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+</body>
+</html>
