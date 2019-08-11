@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- 
+        基本的な使用例とリンク文字の例
+        role属性はアクセシビリティ配慮
+     -->
+    <div class="alert alert-primary" role="alert">alert-primary<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-secondary" role="alert">alert-secondary<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-success" role="alert">alert-success<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-danger" role="alert">alert-danger<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-warning" role="alert">alert-warning<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-info" role="alert">alert-info<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-light" role="alert">alert-light<a href="#" class="alert-link">alert内のリンク文字</a></div>
+    <div class="alert alert-dark" role="alert">alert-dark<a href="#" class="alert-link">alert内のリンク文字</a></div>
+
+    <!-- 
+        アラート内にコンテンツを追加
+        mb-0：下マージンを0にして、余白を削除
+     -->
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">アラートの見出し（h4）</h4>
+        <p>アラート内の段落（p）</p>
+        <hr>
+        <p class="mb-0">アラート内の段落（p）</p>
+    </div>
+
+    <!-- 
+        アラートを閉じる：alert-dismissible, buttonにdata-dismiss=alert(javascriptで削除を行うためdata-から始まるカスタムデータ属性を追記)
+        area-hidden=”true”：スクリーンリーダーの読み上げをスキップ
+        &times;　乗算記号
+     -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">右側の「×」を押すとアラートを閉じる
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
