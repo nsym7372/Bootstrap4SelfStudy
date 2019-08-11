@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h3 {
+            color: red;
+            font: lighter;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        レスポンシブ対応はtext-nowrapと一緒に使う
+        text-nowrapがない場合、日本語は自動的に改行されるため、列幅がテーブル幅に収まってしまう
+        列幅が収まってしまうため、スクロールバーが表示されなくなる
+     -->
+    <h3>レスポンシブ対応（上はxl、下はsm。スクロールバーが表示されるタイミングに違い)</h3>
+    <h4>通常xlの場合、「xl以上で」そうなるが、ここは逆方向のbreak pointになっている</h4>
+     <div class="table-responsive-xl">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">見出しセル</th>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                </tr>
+                <tr>
+                    <th scope="row">見出しセル</th>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                </tr>
+                <tr>
+                    <th scope="row">見出しセル</th>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <div class="table-responsive-sm">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                    <th scope="col">見出しセル</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">見出しセル</th>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                </tr>
+                <tr>
+                    <th scope="row">見出しセル</th>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                </tr>
+                <tr>
+                    <th scope="row">見出しセル</th>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
