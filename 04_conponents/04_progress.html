@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- 
+        プログレスバー
+        １．コンポーネント全体を包括する要素にprogressクラス
+        ２．プログレスバー（ブロック、progress-barクラス）に最大値を設定
+        ※HTML5にはprogress要素あり
+
+        aria-valuenowは支援技術に状態を伝えるもの
+        進捗状況を表示するためには、style属性かSizingユーティリティを使用
+
+        並べると隣り合うため、親クラスにmb-3を入れている
+     -->
+    <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <!-- style属性で進捗表示 -->
+    <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+            style="width:20%"></div>
+    </div>
+
+    <!-- Sizingユーティリティ（クラス）で進捗表示 -->
+    <div class="progress mb-3">
+        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        </div>
+    </div>
+
+    <!-- テキストラベル追加 -->
+    <div class="progress mb-3">
+        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
+        </div>
+    </div>
+
+    <!-- ストライプ -->
+    <div class="progress mb-3">
+        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100" style="width:80%"></div>
+    </div>
+
+    <!-- ストライプ + アニメーション(ストライプとともに使う) -->
+    <div class="progress mb-3">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
+            aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
+    </div>
+
+    <!-- 高さ変更（親クラス、デフォルトは1rem：16px） -->
+    <!-- 背景変更 -->
+    <div class="progress mb-3" style="height:0.5rem">
+        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+            style="width:85%"></div>
+    </div>
+
+    <!-- 
+        複数のプログレスバーを積み重ね
+        以下の場合は success 75% + warning 10% + danger 5%で合計90% 
+    -->
+    <div class="progress mb-3">
+        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"
+            style="width:5%"></div>
+        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
+            style="width:10%"></div>
+        <div class="progress-bar bg-success w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+            aria-valuemax="100">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

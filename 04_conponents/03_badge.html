@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!-- 
+        badge：親要素のフォントサイズに合わせたものとなる
+     -->
+    <h3>h3本文<span class="badge badge-success">badge-success/span本文</span></h3>
+    <p>p本文<span class="badge badge-info">gedge-info/span本文</span></p>
+    <h3>h3本文<span class="badge badge-primary badge-pill">span本文　ピル型のバッチ</span></h3>
+    <h3>h3本文<a href="#" class="badge badge-secondary">a要素　アクション付きバッチ</a></h3>
+
+    <!-- 
+        ボタンにバッジを表示し、カウンター風にする
+     -->
+    <button class="btn btn-primary" type="button">ボタンテキスト<span class="badge badge-light">4</span></button>
+
+     <!-- 
+         sr-onlyでスクリーンリーダー用の非表示テキストを追加（見た目は同じ）
+      -->
+    <button class="btn btn-primary" type="button">ボタンテキスト<span class="badge badge-light">4</span><span class="sr-only">未読メッセージ</span></button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+</body>
+</html>
