@@ -8,6 +8,11 @@
     <title>Document</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div.card {
+            margin-bottom: 2rem;
+        }
+    </style>
 
 </head>
 
@@ -44,6 +49,117 @@
         </div>
         <img src="../img/sample.png" alt="..." class="card-img-bottom">
     </div>
+
+    <!-- 
+        カードにリストを組み込む
+     -->
+    <div class="card" style="max-width:25rem">
+        <img src="../img/sample.png" alt="..." class="card-img-top">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">リスト01</li>
+            <li class="list-group-item">リスト02</li>
+            <li class="list-group-item">リスト03</li>
+        </ul>
+    </div>
+
+    <!-- 
+        ヘッダー、フッター
+     -->
+    <div class="card" style="max-width:25rem">
+        <div class="card-header">カードのヘッダー</div>
+        <div class="card-body">
+            <h4 class="card-title">見出し</h4>
+            <p class="card-text">内容文</p>
+        </div>
+        <div class="card-footer">カードのフッター</div>
+    </div>
+
+    <!-- 
+         ヘッダーはdivでなくともOK
+      -->
+    <div class="card" style="max-width:25rem">
+        <h4 class="card-header">カードのヘッダー</h4>
+        <div class="card-body">
+            <h4 class="card-title">見出し</h4>
+            <p class="card-text">内容文</p>
+        </div>
+        <div class="card-footer">カードのフッター</div>
+    </div>
+
+    <!-- 
+        Colorユーティリティの使用
+        bg：背景色
+        border：枠線
+     -->
+    <div class="card bg-primary" style="max-width:25rem">
+        <div class="card-header border-success">カードのヘッダー</div>
+        <div class="card-body">
+            <h4 class="card-title">見出し</h4>
+            <p class="card-text">内容文</p>
+        </div>
+        <div class="card-footer">カードのフッター</div>
+    </div>
+
+    <!-- 
+        ヘッダ、フッタのデフォルト背景色を除去
+     -->
+    <div class="card" style="max-width:25rem">
+        <div class="card-header bg-transparent">カードのヘッダー</div>
+        <div class="card-body">
+            <h4 class="card-title">見出し</h4>
+            <p class="card-text">内容文</p>
+        </div>
+        <div class="card-footer">カードのフッター</div>
+    </div>
+
+    <!-- 
+        カード（ヘッダー）にナビゲーション（タブ型）
+     -->
+    <div class="card" style="max-width:25rem">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">見出し</h4>
+            <p class="card-text">内容文</p>
+        </div>
+        <div class="card-footer">カードのフッター</div>
+    </div>
+
+    <!-- 
+        カード（ヘッダー）にナビゲーション（ピル型）
+     -->
+    <div class="card" style="max-width:25rem">
+        <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">見出し</h4>
+            <p class="card-text">内容文</p>
+        </div>
+        <div class="card-footer">カードのフッター</div>
+    </div>
+
+    <!-- 
+        画像とテキストを重ね合わせる
+     -->
+    <div class="card" style="max-width:25rem">
+            <img src="../img/sample.png" alt="..." class="card-img">
+            <div class="card-img-overlay">
+                <h4 class="card-title">カード見出し</h4>
+                <h6 class="card-subtitle">カード副見出し</h6>
+                <p class="card-text">カードの内容文</p>
+                <a href="#" class="btn btn-primary">リンク</a>
+            </div>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

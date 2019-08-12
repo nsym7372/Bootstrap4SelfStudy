@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h3 {
+            font: lighter;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        カードグループによるレイアウト
+        連結して均一化サイズでグループ化するコンポーネント
+        親要素にcard-group
+     -->
+    <h3>カードグループによるレイアウト</h3>
+    <div class="card-group mb-3">
+        <!-- card1 -->
+        <div class="card" style="max-width:25rem">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+
+        <!-- card2 -->
+        <div class="card" style="max-width:25rem">
+            <img src="../img/sample.png" alt="..." class="card-img">
+            <div class="card-img-overlay">
+                <h4 class="card-title">カード見出し</h4>
+                <h6 class="card-subtitle">カード副見出し</h6>
+                <p class="card-text">カードの内容文</p>
+                <a href="#" class="btn btn-primary">リンク</a>
+            </div>
+        </div>
+
+        <!-- card3 -->
+        <div class="card" style="max-width:25rem">
+            <div class="card-header">カードのヘッダー</div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+    </div>
+
+    <!-- 
+        カードデッキによるレイアウト
+        連結せずに均一サイズでグループ化
+        親要素にcard-deck
+     -->
+    <h3>カードデッキによるレイアウト</h3>
+    <div class="card-deck mb-3">
+        <!-- card1 -->
+        <div class="card" style="max-width:25rem">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+
+        <!-- card2 -->
+        <div class="card" style="max-width:25rem">
+            <img src="../img/sample.png" alt="..." class="card-img">
+            <div class="card-img-overlay">
+                <h4 class="card-title">カード見出し</h4>
+                <h6 class="card-subtitle">カード副見出し</h6>
+                <p class="card-text">カードの内容文</p>
+                <a href="#" class="btn btn-primary">リンク</a>
+            </div>
+        </div>
+
+        <!-- card3 -->
+        <div class="card" style="max-width:25rem">
+            <div class="card-header">カードのヘッダー</div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+    </div>
+
+    <!-- 
+         カードカラムによるレイアウト
+         タイル乗の列にレイアウトする
+         親要素にcard-columns
+         デフォルトではsm以上でカラム数が3になる
+         上から下へ、左から右へ
+      -->
+
+    <h3>カードカラムによるレイアウト</h3>
+    <div class="card-columns mb-3">
+        <!-- 1 -->
+        <div class="card">
+            <img src="../img/sample.png" alt="..." class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">カード見出し</h4>
+                <h6 class="card-subtitle">カード副見出し</h6>
+                <p class="card-text">カードの内容文</p>
+                <a href="#" class="btn btn-primary">リンク</a>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">カード見出し</h4>
+                <h6 class="card-subtitle">カード副見出し</h6>
+                <p class="card-text">カードの内容文</p>
+                <a href="#" class="btn btn-primary">リンク</a>
+            </div>
+            <img src="../img/sample.png" alt="..." class="card-img-bottom">
+        </div>
+
+        <!-- 3 -->
+        <div class="card">
+            <img src="../img/sample.png" alt="..." class="card-img-top">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">リスト01</li>
+                <li class="list-group-item">リスト02</li>
+                <li class="list-group-item">リスト03</li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="card">
+            <div class="card-header">カードのヘッダー</div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card">
+            <h4 class="card-header">カードのヘッダー</h4>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card bg-primary">
+            <div class="card-header border-success">カードのヘッダー</div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card">
+            <div class="card-header bg-transparent">カードのヘッダー</div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">見出し</h4>
+                <p class="card-text">内容文</p>
+            </div>
+            <div class="card-footer">カードのフッター</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
