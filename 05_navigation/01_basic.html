@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h4 {
+            margin-bottom: 0.5rem;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 
+        基本
+        ulにnav, liにnav-item
+     -->
+    <h4>ul要素にnavクラスを追加</h4>
+    <ul class="nav border mb-3">
+        <li class="nav-item"><a href="#" class="nav-link">リンク</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+        <li class="nav-item"><a href="#" class="nav-link disabled">無効</a></li>
+    </ul>
+
+    <!-- 
+        navで実装（ulと同じ）
+     -->
+    <h4>nav要素にnavクラスを追加</h4>
+    <nav class="nav border mb-3">
+        <a href="#" class="nav-link">リンク</a>
+        <a href="#" class="nav-link active">アクティブ</a>
+        <a href="#" class="nav-link disabled">無効</a>
+    </nav>
+
+    <!-- containerにmax-widthがあるため、左右に余白が出る  -->
+    <h4>水平方向の位置合わせ</h4>
+    <div class="container mb-3">
+        <nav class="nav border justify-content-start">
+            <a href="#" class="nav-link">リンク</a>
+            <a href="#" class="nav-link active">アクティブ</a>
+            <a href="#" class="nav-link disabled">無効</a>
+        </nav>
+    </div>
+
+    <div class="container mb-3">
+        <nav class="nav border justify-content-center">
+            <a href="#" class="nav-link">リンク</a>
+            <a href="#" class="nav-link active">アクティブ</a>
+            <a href="#" class="nav-link disabled">無効</a>
+        </nav>
+    </div>
+
+    <div class="container mb-3">
+        <nav class="nav border justify-content-end">
+            <a href="#" class="nav-link">リンク</a>
+            <a href="#" class="nav-link active">アクティブ</a>
+            <a href="#" class="nav-link disabled">無効</a>
+        </nav>
+    </div>
+
+    <!-- ul, liでも同じ -->
+    <h4>縦に並べる</h4>
+    <div class="container">
+        <nav class="nav border mb-3 flex-column">
+            <a href="#" class="nav-link">リンク</a>
+            <a href="#" class="nav-link active">アクティブ</a>
+            <a href="#" class="nav-link disabled">無効</a>
+        </nav>
+    </div>
+
+    <h4>タブ型</h4>
+    <div class="container">
+        <nav class="nav border mb-3 nav-tabs">
+            <a href="#" class="nav-link">リンク</a>
+            <a href="#" class="nav-link active">アクティブ</a>
+            <a href="#" class="nav-link disabled">無効</a>
+        </nav>
+    </div>
+
+    <h4>ピル型</h4>
+    <div class="container">
+        <nav class="nav border mb-3 nav-pills">
+            <a href="#" class="nav-link">リンク</a>
+            <a href="#" class="nav-link active">アクティブ</a>
+            <a href="#" class="nav-link disabled">無効</a>
+        </nav>
+    </div>
+
+    <!-- 親クラスにnav-fill、各項目にnav-itemが必要 -->
+    <h4>幅調整</h4>
+    <div class="container">
+        <nav class="nav border mb-3 nav-pills nav-fill">
+            <a href="#" class="nav-item nav-link">リンク</a>
+            <a href="#" class="nav-item nav-link active">アクティブ</a>
+            <a href="#" class="nav-item nav-link disabled">無効</a>
+            <a href="#" class="nav-item nav-link active">とてもとても長いテキストリンク</a>
+        </nav>
+    </div>
+
+    <!-- 親クラスnav-fillの代わりにnav-justified -->
+    <h4>幅調整（幅均等）</h4>
+    <div class="container">
+        <nav class="nav border mb-3 nav-pills nav-justified">
+            <a href="#" class="nav-item nav-link">リンク</a>
+            <a href="#" class="nav-item nav-link active">アクティブ</a>
+            <a href="#" class="nav-item nav-link disabled">無効</a>
+            <a href="#" class="nav-item nav-link active">とてもとても長いテキストリンク</a>
+        </nav>
+    </div>
+
+    <!-- 
+        flex-column(縦並び)、flex-sm-row(sm以上でrow)
+     -->
+    <h4>レスポンシブ対応</h4>
+    <div class="container">
+        <nav class="nav border mb-3 nav-pills flex-column flex-sm-row nav-justified">
+            <a href="#" class="text-sm-center nav-item nav-link">リンク</a>
+            <a href="#" class="text-sm-center nav-item nav-link active">アクティブ</a>
+            <a href="#" class="text-sm-center nav-item nav-link disabled">無効</a>
+            <a href="#" class="text-sm-center nav-item nav-link active">とてもとても長いテキストリンク</a>
+        </nav>
+    </div>
+
+    <!-- 
+        ドロップダウン pill型でも同じ
+        組み込むli要素にdropdownクラス
+    -->
+    <h4>ドロップダウンナビゲーション</h4>
+    <div class="container">
+        <ul class="nav border mb-3 nav-tabs">
+            <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">リンク1</a>
+                    <a href="#" class="dropdown-item">リンク2</a>
+                    <a href="#" class="dropdown-item">リンク3</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">リンク4</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link disabled">無効</a></li>
+        </ul>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

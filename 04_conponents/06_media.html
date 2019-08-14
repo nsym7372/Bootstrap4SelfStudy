@@ -10,6 +10,10 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
+        h4 {
+            color: red;
+        }
+
         img {
             max-width: 5rem;
         }
@@ -56,10 +60,7 @@
         </div>
     </div>
 
-    <!-- 
-        flexユーティリティを使用
-        画像の縦位置を整列
-     -->
+    <h4>flexユーティリティを使って、画像の縦位置を整列</h4>
     <!-- 上 -->
     <div class="media">
         <img src="../img/sample.png" alt="" class="align-self-start mr-3">
@@ -86,6 +87,47 @@
             このテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルです
         </div>
     </div>
+
+    <h4>flexオブジェクトを使って、メディアクエリの表示順変更</h4>
+    <!-- 通常 -->
+    <div class="media">
+        <img src="../img/sample.png" alt="" class="align-self-start mr-3">
+        <div class="media-body">
+            <h5>メディアオブジェクト</h5>
+            このテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルです
+        </div>
+    </div>
+
+    <!-- 逆 -->
+    <div class="media">
+        <img src="../img/sample.png" alt="" class="align-self-start order-2 mr-3">
+        <div class="media-body order-1">
+            <h5>メディアオブジェクト</h5>
+            このテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルですこのテキストはサンプルです
+        </div>
+    </div>
+
+    <h4>リストにメディアオブジェクトを組み込む</h4>
+    <ul class="list-unstyled">
+        <li class="media mb-4">
+            <img src="../img/sample.png" alt="">
+            <div class="media-body">
+                <h5>メディア本文</h5>
+            </div>
+        </li>
+        <li class="media mb-4">
+            <img src="../img/sample.png" alt="">
+            <div class="media-body">
+                <h5>メディア本文</h5>
+            </div>
+        </li>
+        <li class="media mb-4">
+            <img src="../img/sample.png" alt="">
+            <div class="media-body">
+                <h5>メディア本文</h5>
+            </div>
+        </li>
+    </ul>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
