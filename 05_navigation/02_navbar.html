@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- 
+        ナビゲーションバー
+        ブランド、ナビゲーション、navbar（外枠）、検索フォームなど
+     -->
+    <!-- 
+        【必須】
+         navbar:ナビゲーションバー
+         navbar-expand:navbar-expand-mdの場合、mdがブレイクポイント（横並び、ドロップダウン）
+         カラースキーム（navbar-dark / navbar-light）
+      -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+
+        <!-- ブランド：見出しやロゴ a, span, imgなど様々な要素を利用可 -->
+        <a href="#" class="navbar-brand">ブランド</a>
+
+        <!-- collapse, navbar-collapse指定する事により、折り畳まれた際に非表示とする -->
+        <div class="collapse navbar-collapse">
+            <a href="#" class="navbar-brand">隠れるブランド</a>
+        </div>　
+
+        <!-- 
+            トグルボタン
+            data-target:表示対象
+         -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Contents"
+            aria-controls="Contents" aria-expand="false" aria-label="ナビゲーション切り替え"><span
+                class="navbar-toggler-icon"></span></button>
+
+        <!-- ナビゲーションバー：5-1参照、但し、タブ型ピル型などは利用しない -->
+        <div class="collapse navbar-collapse" id="Contents">
+            <!-- ナビゲーション -->
+            <ul class="navbar-nav mr-auto">　
+                <!-- mr-autoを指定する事により、次の要素以降を右寄せ -->
+                <li class="nav-item"><a href="#" class="nav-link active">アクティブ</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">リンク1</a>
+                        <a href="#" class="dropdown-item">リンク2</a>
+                        <a href="#" class="dropdown-item">リンク3</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">リンク4</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">無効</a></li>
+            </ul>
+
+            <!-- テキスト -->
+            <div class="collapse navbar-collapse mr-3" id="navbarText">
+                <span class="navbar-text ml-auto">テキスト</span>
+            </div>
+
+            <!-- ボタン -->
+            <form action="" class="form-inline">
+                <button class="btn btn-light mr-3" type="button">通常のボタン</button>
+                <button class="btn btn-sm btn-light mr-3" type="button">小サイズ</button>
+            </form>
+
+            <!-- フォーム -->
+            <form action="hogefuga" class="form-inline">
+                <input type="search" class="form-control mr-sm-2" placeholder="検索キーワード" aria-label="検索キーワード">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">検索</button>
+            </form>
+        </div>
+    </nav>
+
+    <h5>配色</h5>
+    <!-- navbar-darkで文字色を明るくし、bg-darkで暗い背景を設定 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+        <a href="#" class="navbar-brand">ブランド</a>　
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+        <a href="#" class="navbar-brand">ブランド</a>　
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-light mb-3" style="background-color: #e3f2fd;">
+        <a href="#" class="navbar-brand">ブランド</a>　
+    </nav>
+
+    <h5>幅</h5>
+    <!-- container幅に収まるナビゲーションバー -->
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+            <a href="#" class="navbar-brand">ブランド</a>　
+        </nav>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
