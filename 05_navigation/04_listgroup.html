@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .list-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        リストを枠で囲ったひとまとまりのコンテンツとして表示
+     -->
+    <h5>基本</h5>
+    <ul class="list-group">
+        <li class="list-group-item active">リスト項目1</li>
+        <li class="list-group-item">リスト項目2</li>
+        <li class="list-group-item disabled">リスト項目3</li>
+    </ul>
+
+    <!-- divを親要素にする -->
+    <h5>aタグで作成、アクションあり</h5>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">リスト項目1</a>
+        <a href="#" class="list-group-item">リスト項目2</a> <!-- アクションなし、普通のaタグ -->
+        <a href="#" class="list-group-item list-group-item-action disabled">リスト項目3</a>
+    </div>
+
+    <h5>ボタンで作成</h5>
+    <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action">リスト項目1</button>
+        <button type="button" class="list-group-item">リスト項目2</button> <!-- 見た目がそろわない -->
+        <button type="button" class="list-group-item list-group-item-action disabled">リスト項目3</button>
+    </div>
+
+    <!-- 
+        配色
+        リンクとaタグでは、色とactiveを同時に指定した際の振る舞いに差が出る
+        disabledはどちらも同じ
+     -->
+    <h5>ulで作成、色の変更</h5>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">リスト項目1</li>
+        <li class="list-group-item list-group-item-success active">リスト項目2</li>
+        <li class="list-group-item list-group-item-primary disabled">リスト項目3</li>
+    </ul>
+
+    <h5>aタグで作成、色の変更</h5>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success">リスト項目1</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success active">リスト項目2</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success disabled">リスト項目3</a>
+    </div>
+
+    <!-- 
+        d-flex:displayユーティリティ
+        justyfy-content-between, align-items-center:Flexユーティリティ
+     -->
+    <h5>バッジをつける</h5>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">リスト項目1<span
+                class="badge badge-primary badge-pill">14</span></li>
+        <li class="list-group-item">リスト項目2</li>
+        <li class="list-group-item">リスト項目3</li>
+    </ul>
+
+    <h5>枠なし（わかりやすいようにcontainerに入れた）</h5>
+    <div class="container">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">リスト項目1</li>
+            <li class="list-group-item">リスト項目2</li>
+            <li class="list-group-item">リスト項目3</li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

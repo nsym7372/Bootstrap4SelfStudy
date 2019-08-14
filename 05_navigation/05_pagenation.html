@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        nav {
+            margin-bottom: 1.5rem
+        }
+    </style>
+</head>
+
+<body>
+
+    <h5>基本</h5>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a href="#" class="page-link">前</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">次</a></li>
+        </ul>
+    </nav>
+
+    <h5>前、次をアイコンにする</h5>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="前へ">
+                    <span aria-hidden="true">&laquo;</span><span class="sr-only">前へ</span>
+                </a>
+            </li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item">
+                <a href="#" class="page-link"><span>&raquo;</span></a></li>
+        </ul>
+    </nav>
+
+    <h5>disable, active</h5>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a href="#" class="page-link">前</a></li>
+            <li class="page-item disabled"><a href="#" class="page-link">1</a></li>
+            <li class="page-item active"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">次</a></li>
+        </ul>
+    </nav>
+
+    <!-- レスポンシブではない -->
+    <h5>大きさ（lg or sm）</h5>
+    <nav>
+        <ul class="pagination pagination-sm">
+            <li class="page-item"><a href="#" class="page-link">前</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">次</a></li>
+        </ul>
+    </nav>
+
+    <h5>水平配置(center or end)</h5>
+    <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a href="#" class="page-link">前</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">次</a></li>
+        </ul>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
