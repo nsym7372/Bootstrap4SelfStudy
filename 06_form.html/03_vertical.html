@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <form action="#" class="container">
+        <!-- 
+            form-groupにrowを指定、ラベルとinputを列として幅指定
+            input, selectはdisplay:inlineの為divで括っている
+            label.col-form-labelでラベル縦位置調整
+        -->
+        <div class="form-group row">
+            <label for="email1" class="col-sm-2 col-form-label">メールアドレス</label>
+            <div class="col-sm-10">
+                <input type="email" placeholder="メールアドレスを入力" class="form-control" id="email1">
+                <small id="emailhelp" class="form-text text-muted">個人情報を収集する事はありません</small>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="password1" class="col-sm-2 col-form-label">パスワード</label>
+            <div class="col-sm-10">
+                <input type="password" placeholder="パスワードを入力" class="form-control" id="password1">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="select1" class="col-sm-2 col-form-label">プルダウンメニュー</label>
+            <div class="col-sm-10">
+                <select name="#" id="select1" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="select2" class="col-sm-2 col-form-label">複数選択のプルダウンメニュー</label>
+            <div class="col-sm-10">
+                <select multiple name="#" id="select2" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
