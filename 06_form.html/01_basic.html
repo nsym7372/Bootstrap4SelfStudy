@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- 
+        form-control は要素やinput typeをみて見栄えを変える
+        label for=(コントロールID)で、ラベルをクリックした際にコントロールクリックと同等の処理
+     -->
+
+    <form action="#">
+        <!-- メールアドレス -->
+        <div class="form-group">
+            <label for="email1">メールアドレス</label>
+            <input type="email" placeholder="メールアドレスを入力" class="form-control" id="email1">
+            <small id="emailhelp" class="form-text text-muted">個人情報を収集する事はありません</small>
+        </div>
+
+        <!-- パスワード -->
+        <div class="form-group">
+            <label for="password1">パスワード</label>
+            <input type="password" placeholder="パスワードを入力" class="form-control" id="password1">
+        </div>
+
+        <!-- プルダウンメニュー -->
+        <div class="form-group">
+            <label for="select1">プルダウンメニュー</label>
+            <select name="#" id="select1" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <!-- プルダウンメニュー -->
+        <div class="form-group">
+            <label for="select2">複数選択のプルダウンメニュー</label>
+            <select multiple name="#" id="select2" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <!-- 複数行のテキスト入力 -->
+        <div class="form-group">
+            <label for="textarea1">複数行のテキスト入力</label>
+            <textarea name="" id="textarea1" cols="30" rows="3" class="form-control"></textarea>
+        </div>
+
+        <!-- ファイル選択 -->
+        <div class="form-group">
+            <label for="file1">ファイルを選択</label>
+            <input type="file" class="form-control-file" id="file1">
+        </div>
+
+        <!-- レンジ -->
+        <div class="form-group">
+            <label for="range">レンジ入力の例</label>
+            <input type="range" class="form-control-range" id="range">
+        </div>
+
+        <!-- チェックボックス -->
+        <div class="form-group">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1" value="1"><label for="check1"
+                    class="form-check-label">選択1</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check2" value="2" disabled><label for="check2"
+                    class="form-check-label">選択2（無効）</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check3" value="3"><label for="check3"
+                    class="form-check-label">選択3</label>
+            </div>
+        </div>
+
+        <!-- ラジオボタン -->
+        <div class="form-check"><input type="radio" class="form-check-input" name="radios" value="option1"
+                checked="checked" id="radio1"><label for="radio1" class="form-check-label">オプション1</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="radios" value="option2"
+                id="radio2"><label for="radio2" class="form-check-label">オプション2</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="radios" value="option3" disabled
+                id="radio3"><label for="radio3" class="form-check-label">オプション3（無効）</label></div>
+
+        <!-- 送信ボタン -->
+        <button type="submit" class="btn btn-primary mb-5">送信</button>
+
+        <h5>サイズ変更:form-controlクラスにlg/smを追加</h5>
+        <div class="form-group">
+            <label for="select1">プルダウンメニュー</label>
+            <select name="#" id="select1" class="form-control form-control-lg">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="select1">プルダウンメニュー</label>
+            <select name="#" id="select1" class="form-control form-control-sm">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <h5>コントロールを読み取り専用にする:input要素にform-control-plaintextを追加</h5>
+        <!-- form-control-plaintextは見栄えの調整。readonlyで読み取り専用、valueに値。form-controlクラスを削除すると入力枠非表示 -->
+        <div class="form-group">
+            <label for="email1">メールアドレス</label>
+            <input type="email" placeholder="メールアドレスを入力" readonly class="form-control form-control-plaintext"
+                id="email1" value="email@example.com">
+            <small id="emailhelp" class="form-text text-muted">個人情報を収集する事はありません</small>
+        </div>
+
+        <h5>選択項目を横並び：form-check要素にform-check-inlineクラスを追加</h5>
+        <div class="form-group">
+            <div class="form-check form-check-inline"><input type="radio" class="form-check-input" name="radios"
+                    value="option1" id="radio1"><label for="radio1" class="form-check-label">オプション1</label></div>
+            <div class="form-check form-check-inline"><input type="radio" class="form-check-input" name="radios"
+                    value="option2" id="radio2"><label for="radio2" class="form-check-label">オプション2</label></div>
+            <div class="form-check form-check-inline"><input type="radio" class="form-check-input" name="radios"
+                    value="option3" id="radio3"><label for="radio3" class="form-check-label">オプション3</label></div>
+        </div>
+
+        <h5>選択項目のラベル削除：input要素にposition-static追加</h5>
+        <!-- position-staticが無いと、重なって表示されてしまう -->
+        <div class="form-group">
+            <div class="form-check"><input type="radio" class="form-check-input position-static" name="radios"
+                    value="option1" id="radio1"></div>
+            <div class="form-check"><input type="radio" class="form-check-input position-static" name="radios"
+                    value="option2" id="radio2"></div>
+            <div class="form-check"><input type="radio" class="form-check-input position-static" name="radios"
+                    value="option3" id="radio3"></div>
+        </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
