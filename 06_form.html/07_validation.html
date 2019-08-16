@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+        div.container{
+            margin-bottom: 3rem;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" class="needs-validation" novalidate="novalidate">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validation01">姓</label>
+                    <input type="text" class="form-control" id="validation01" placeholder="first name" value="山田"
+                        required="required">
+                    <div class="valid-feedback">入力済み</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="validation02">名</label>
+                    <input type="text" class="form-control" id="validation02" placeholder="last name" value="太郎"
+                        required="required">
+                    <div class="valid-feedback">入力済み</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validation03">市町村</label>
+                    <input type="text" class="form-control" id="validation03" placeholder="市町村名を入力" required="required">
+                    <div class="invalid-feedback">市町村名を入力してください</div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="validation04">都道府県</label>
+                    <input type="text" class="form-control" id="validation04" placeholder="都道府県を入力" required="required">
+                    <div class="invalid-feedback">都道府県を入力してください</div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="validation04">〒</label>
+                    <input type="text" class="form-control" id="validation05" placeholder="〒" required="required">
+                    <div class="invalid-feedback">郵便番号を入力してください</div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">送信</button>
+        </form>
+    </div>
+
+
+
+    <div class="container">
+        <h5>ツールチップ型のメッセージ：メッセージのクラスをvalid-feedback → valid-tooltipに変更</h5>
+        <form action="#" class="needs-validation" novalidate="novalidate">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validation01">姓</label>
+                    <input type="text" class="form-control" id="validation01" placeholder="first name" value="山田"
+                        required="required">
+                    <div class="valid-tooltip">入力済み</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="validation03">市町村</label>
+                    <input type="text" class="form-control" id="validation03" placeholder="市町村名を入力" required="required">
+                    <div class="invalid-tooltip">市町村名を入力してください</div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">送信</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h5>サーバー側検証：inputに対して、is-valid/is-invalidクラスを付与</h5>
+        <form action="#" class="needs-validation" novalidate="novalidate">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validation01">姓</label>
+                    <input type="text" class="form-control is-valid" id="validation01" placeholder="first name" value="山田"
+                        required="required">
+                    <div class="valid-feedback">入力済み</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="validation03">市町村</label>
+                    <input type="text" class="form-control is-invalid" id="validation03" placeholder="市町村名を入力" required="required">
+                    <div class="invalid-feedback">市町村名を入力してください</div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+</body>
+
+</html>
