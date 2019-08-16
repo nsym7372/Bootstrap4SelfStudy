@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        form {
+            margin-bottom: 3rem
+        }
+
+        /* カスタムファイル参照の右ボタン表示を「参照」に変更（デフォルトではBrowse） */
+        .custom-file-input:lang(ja)~.custom-file-label::after {
+            content: "参照"
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <h5>bootstrapの見栄えに合わせたコントロール</h5>
+            <h6> checkbox </h6>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck0">
+                <label for="customCheck0" class="custom-control-label">選択</label>
+            </div>
+
+            <h6> radio button </h6>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="option1" name="option" class="custom-control-input">
+                <label for="option1" class="custom-control-label">オプション1</label>
+            </div>
+
+            <div class="custom-control custom-radio">
+                <input type="radio" id="option2" name="option" class="custom-control-input">
+                <label for="option2" class="custom-control-label">オプション2</label>
+            </div>
+
+            <h6 class=pt-3> プルダウンメニュー </h6>
+            <div>
+                <select name="" id="" class="custom-select mb-3">
+                    <option value="" selected="selected">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <h6> サイズ変更(lg/sm) </h6>
+                <select name="" id="" class="custom-select custom-select-lg mb-3">
+                    <option value="" selected="selected">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <h6> 複数選択 </h6>
+                <select name="" id="" class="custom-select mb-3" multiple>
+                    <option value="" selected="selected">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <h6> 複数選択、表示幅はsizeで指定 </h6>
+                <select name="" id="" class="custom-select mb-3" size="2" multiple>
+                    <option value="" selected="selected">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <h6>ファイル選択</h6>
+            <!-- デフォルト -->
+            <div class="default-file mb-5">
+                <input type="file" id="defaultFile" lang="ja">
+                <label for="defaultFile">ファイル選択</label>
+            </div>
+
+            <!-- カスタム -->
+            <div class="custom-file mb-5">
+                <input type="file" id="customFile" lang="ja" class="custom-file-input">
+                <label class="custom-file-label" for="customFile">ファイル選択</label>
+            </div>
+
+            <h6>レンジ</h6>
+            <div class="form-group mb-5">
+                <label for="customRange1">カスタムレンジ入力の例</label>
+                <input type="range" class="custom-range" id="customRange1">
+            </div>
+
+            <div class="form-group mb-5">
+                <label for="customRange2">カスタムレンジ入力の例(min=0, max=5)</label>
+                <input type="range" class="custom-range" id="customRange1" min="0" max="5">
+            </div>
+
+            <div class="form-group mb-5">
+                <label for="customRange1">カスタムレンジ入力の例(step=0.5)</label>
+                <input type="range" class="custom-range" id="customRange1" min="0" max="5" step="0.5">
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="">
+            <h5>custom-controlのチェックボックスで不確定状態を表示</h5>
+            <h6>
+                そもそも、html5では不確定（indeterminate）が存在する
+                bootstrapのcustom-controlでは表示を行わないため、jqueryで表示する
+            </h6>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                <label for="customCheck1" class="custom-control-label">選択済み(checked)</label>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck2" unchecked>
+                <label for="customCheck2" class="custom-control-label">未選択(unchecked)</label>
+            </div>
+
+            <h6> indeterminate（表示だけ、操作では再現しない） </h6>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input indeterminate-box" id="customCheck3">
+                <label for="customCheck3" class="custom-control-label">不確定(indaterminate)</label>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+    <h6> checkboxで不確定状態を表示 </h6>
+    <script>
+        $('.indeterminate-box').prop('indeterminate', true);
+    </script>
+
+</body>
+
+</html>
