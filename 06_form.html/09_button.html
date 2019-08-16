@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        h5 {
+            padding-top: 1rem
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h5>普通の</h5>
+        <button type="button" class="btn btn-info">buttonタグ</button>
+
+        <h5>aタグ</h5>
+        <a href="#" class="btn btn-info" role="button">aタグ</a>
+
+        <h5>input要素</h5>
+        <input type="button" class="btn btn-info" value="input要素">
+
+        <h5>アウトライン</h5>
+        <button type="button" class="btn btn-outline-info">アウトラインボタン</button>
+
+        <h5>サイズ（lg/sm）</h5>
+        <button type="button" class="btn btn-info btn-sm">サイズsm</button>
+
+        <h5>ブロックレベル（全幅）</h5>
+        <button type="button" class="btn btn-info btn-block">ブロックレベル</button>
+
+        <h5>アクティブ状態</h5>
+        <button type="button" class="btn btn-info active">常にアクティブ</button>
+
+        <h5>無効</h5>
+        <button type="button" class="btn btn-info disabled">無効</button>
+
+        <h5>トグルボタン（状態切り替え）</h5>
+        <button type="button" class="btn btn-info" data-toggle="button">トグル</button>
+
+        <h5>チェックボックスをボタンに</h5>
+        <label for="checkbox01" class="btn btn-info">
+            <input type="checkbox" checked="checked" autocomplete="off" id="checkbox01">チェックボックス
+        </label>
+
+        <h5>ラジオボタンをボタンに</h5>
+        <label for="radio01" class="btn btn-info">
+            <input type="radio" checked="checked" autocomplete="off" id="radio01">チェックボックス
+        </label>
+
+        <h5>js buttonメソッド</h5>
+        <button type="button" class="btn btn-info" id="toggle-button">押してね</button>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $("#toggle-button").on("click", function () {
+            $(this).button("toggle").text("押したね");
+        });
+    </script>
+
+</body>
+
+</html>
