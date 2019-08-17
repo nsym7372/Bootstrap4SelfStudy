@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div.dropdown,
+        div.btn-group {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- popper.jsで実現（bootstrap.bundle.jsに組み込み済み） -->
+        <h5>切り替えにボタンを利用</h5>
+        <div class="dropdown">
+            <!-- ドロップダウンの切り替えにボタンを利用 -->
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウン
+            </button>
+
+            <!-- 展開されるドロップダウンメニュー -->
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>切り替えにaタグを利用</h5>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウン
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>アイテムにボタンを利用</h5>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウン
+            </button>
+
+            <!-- 展開されるドロップダウンメニュー -->
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <button class="dropdown-item" type="button">メニュー01</button>
+                <button class="dropdown-item" type="button">メニュー02</button>
+                <button class="dropdown-item" type="button">メニュー03</button>
+            </div>
+        </div>
+
+        <h5>ボタングループにドロップダウンを組み込み</h5>
+        <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウン
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>スプリットボタン（ボタングループ）</h5>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary">
+                スプリットボタン
+            </button>
+            <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button"
+                id="dropdonwMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">ドロップダウン切り替え</span>
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>下方向以外へのドロップダウンリスト（dropup, dropright, dropleft）</h5>
+        <div class="dropdown dropup">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウン
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>メニュー位置の比較（デフォルト：左揃え）</h5>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウンメニュー位置の確認
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>メニュー位置の比較（右揃え）</h5>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウンメニュー位置の確認
+            </button>
+
+            <!-- 右揃えクラスを追加 -->
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdonwMenuButton">
+                <a href="#" class="dropdown-item">メニュー01</a>
+                <a href="#" class="dropdown-item">メニュー02</a>
+                <a href="#" class="dropdown-item">メニュー03</a>
+            </div>
+        </div>
+
+        <h5>様々な要素を追加</h5>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdonwMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ドロップダウンメニュー位置の確認
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdonwMenuButton">
+                <h6 class="dropdown-header">ドロップダウンメニューの見出し</h6>
+                <form action="#" class="px-3">
+                    <!-- メールアドレス -->
+                    <div class="form-group">
+                        <label for="email1">メールアドレス</label>
+                        <input type="email" placeholder="メールアドレスを入力" class="form-control" id="email1">
+                        <small id="emailhelp" class="form-text text-muted">個人情報を収集する事はありません</small>
+                    </div>
+
+                    <!-- パスワード -->
+                    <div class="form-group">
+                        <label for="password1">パスワード</label>
+                        <input type="password" placeholder="パスワードを入力" class="form-control" id="password1">
+                    </div>
+
+                    <!-- 送信ボタン -->
+                    <div class="row justify-content-end pr-3">
+                        <button type="submit" class="btn btn-primary">送信</button>
+                    </div>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">初めての方</a>
+                <a href="#" class="dropdown-item">パスワードをお忘れの方</a>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
