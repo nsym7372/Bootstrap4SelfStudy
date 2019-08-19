@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .d-flex {
+            border: 1px solid aqua;
+            margin-bottom: 1.5rem;
+        }
+
+        .d-flex>div {
+            border: 1px solid gray;
+            padding: .5rem;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h4>主軸設定</h4>
+        <h5>左から右</h5>
+        <div class="d-flex flex-row">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>右から左</h5>
+        <div class="d-flex flex-row-reverse">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>上から下</h5>
+        <div class="d-flex flex-column">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>下から上</h5>
+        <div class="d-flex flex-column-reverse">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h4>主軸方向の整列</h4>
+        <h5>start</h5>
+        <div class="d-flex justify-content-start">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>center</h5>
+        <div class="d-flex justify-content-center">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>end</h5>
+        <div class="d-flex justify-content-end">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>between（始点終点を固定、残りを均等）</h5>
+        <div class="d-flex justify-content-between">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>around（等間隔）</h5>
+        <div class="d-flex justify-content-around">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h4>交差軸方向の整列</h4>
+        <h5>stretch(高さに合わせて伸縮)</h5>
+        <div class="d-flex align-items-stretch" style="height:200px">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>start</h5>
+        <div class="d-flex align-items-start" style="height:200px">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>center</h5>
+        <div class="d-flex align-items-center" style="height:200px">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>end</h5>
+        <div class="d-flex align-items-end" style="height:200px">
+            <div>flexアイテム01</div>
+            <div>flexアイテム02</div>
+            <div>flexアイテム03</div>
+            <div>flexアイテム04</div>
+        </div>
+
+        <h5>baseline（フォントの基準線で揃える）</h5>
+        <div class="d-flex align-items-baseline" style="height:200px">
+            <div style="padding:1rem">flexアイテム01</div>
+            <div style="padding:2rem">flexアイテム02</div>
+            <div style="padding:3rem">flexアイテム03</div>
+            <div style="padding:4rem">flexアイテム04</div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

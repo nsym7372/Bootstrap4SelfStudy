@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container-fluid div {
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- data-toggle=modal でモーダルの表示を切り替え、data-targetで表示する要素を指定 -->
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalBasic">data-apiで表示</button>
+
+        <!-- data-apiを使用せずjavascriptで動作 -->
+        <button id="modalJs" type="button" class="btn btn-secondary">javascriptで表示</button>
+    </div>
+
+
+    <!-- 
+        外枠
+        fadeなどのクラスを指定して、アニメーション表示
+    -->
+    <div class="modal fade" id="modalBasic" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable"
+        aria-hidden="true">
+        <!-- 
+             ダイアログ本体
+             modal-dialog-centeredなど、縦位置指定が可能
+             modal-lg / modal-smによりサイズ変更可能
+         -->
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <!-- コンテンツ -->
+            <div class="modal-content">
+
+                <!-- ヘッダー -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">モーダルのタイトルです</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times</span>
+                    </button>
+                </div>
+
+                <!-- 本文 -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <!-- 全幅のcontainer (containerクラスは固定幅) -->
+                        <div class="row">
+                            <div class="col-md-8">モーダルの本文です グリッドレイアウト可能</div>
+                            <div class="col-md-4 ml-auto">col-md-4 ml-auto</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">col-md-8</div>
+                            <div class="col-md-4 ml-auto">col-md-4 ml-auto</div>
+                        </div>
+
+                    </div>
+                    モーダルの本文です
+                </div>
+
+                <!-- フッター -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let $dialog = $("#modalBasic");
+        $("#modalJs").on("click", function () {
+            $dialog.modal("show");
+        });
+
+        $dialog.on("hide.bs.modal", function(e){
+            if(confirm("閉じて良い？") === false)
+            {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
