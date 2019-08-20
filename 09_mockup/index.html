@@ -58,7 +58,7 @@
         <!-- メインビジュアル -->
         <div class="py-4">
             <div class="container">
-                <div class="carousel slide" data-ride="carousel" id="carouselControls">
+                <div id="main_visual" class="carousel slide" data-ride="carousel">
 
                     <!-- 複数のスライドをまとめる -->
                     <div class="carousel-inner">
@@ -87,18 +87,18 @@
                     </div>
 
                     <!-- prev, next -->
-                    <a href="#carouselControls" class="carousel-control-prev" role="button" data-slide="prev">
+                    <a href="#main_visual" class="carousel-control-prev" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </a>
-                    <a href="#carouselControls" class="carousel-control-next" role="button" data-slide="next">
+                    <a href="#main_visual" class="carousel-control-next" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
 
                     <!-- インジケーター -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselControls" data-slide-to="1"></li>
-                        <li data-target="#carouselControls" data-slide-to="2"></li>
+                        <li data-target="#main_visual" data-slide-to="0" class="active"></li>
+                        <li data-target="#main_visual" data-slide-to="1"></li>
+                        <li data-target="#main_visual" data-slide-to="2"></li>
                     </ol>
 
 
@@ -109,7 +109,25 @@
 
         <!-- コンテンツ01 -->
         <div class="py-4">
-
+            <section id="News">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h3>News</h3>
+                        </div>
+                        <div class="col-md-10">
+                            <dl class="row">
+                                <dt class="col-md-3">2017年〇月〇日</dt>
+                                <dd class="col-md-9">ランチクーポン配布中です</dd>
+                                <dt class="col-md-3">2017年〇月〇日</dt>
+                                <dd class="col-md-9">季節限定メニューを追加しました</dd>
+                                <dt class="col-md-3">2017年〇月〇日</dt>
+                                <dd class="col-md-9">新しい雑貨さん入荷しました</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- コンテンツ02 -->
