@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/* リンク時にヘッダがセクションを隠すことへの対応 */
+/* 位置調整はpadding, マイナスmarginにより調整分を埋める */
+section{
+    margin-top:-60px;
+    padding-top:60px;
+}
