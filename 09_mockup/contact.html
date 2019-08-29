@@ -71,52 +71,84 @@
                 <p>
                     カフェ Mr.M COFFEE(ミスターエムコーヒー)へのお問い合わせは、こちらのフォームをご利用ください
                 </p>
-
-                <!-- フォーム -->
-                <form action="post">
-                    <div class="form-group row">
-                        <label class="col-md-3 col-form-label">お名前</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">メールアドレス</label>
-                        <div class="col-md-9">
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                    </div>
-
-                    <fieldset class="form-group">
-                        <div class="row">
-
-                            <legend class="col-form-label col-md-3">
-                                Mr.M COFFEEを知ったきっかけ
-                            </legend>
-                            <div class="col-md-9 d-flex align-items-center">
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="questionnaire" value="answer1"
-                                        id="radio1" checked>
-                                    <label for="radio1" class="form-check-label">口コミ</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="questionnaire" value="answer2"
-                                        id="radio2">
-                                    <label for="radio2" class="form-check-label">検索エンジン</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="questionnaire" value="answer3"
-                                        id="radio3">
-                                    <label for="radio3" class="form-check-label">その他</label>
-                                </div>
-                            </div>
-
-                        </div>
-                    </fieldset>
-
-                </form>
             </div>
+            <div class="py-3">
+                <div class="container">
+                    <h3 class="mb-3">お問い合わせフォーム</h3>
+                    <!-- フォーム -->
+                    <form action="post">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">お名前<span class="badge badge-warning">必須</span></label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="" class="col-md-3 col-form-label">メールアドレス<span class="badge badge-warning">必須</span></label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+
+                                <legend class="col-form-label col-md-3">
+                                    Mr.M COFFEEを知ったきっかけ
+                                </legend>
+                                <div class="col-md-9 d-flex align-items-center">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="questionnaire"
+                                            value="answer1" id="radio1" checked>
+                                        <label for="radio1" class="form-check-label">口コミ</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="questionnaire"
+                                            value="answer2" id="radio2">
+                                        <label for="radio2" class="form-check-label">検索エンジン</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="questionnaire"
+                                            value="answer3" id="radio3">
+                                        <label for="radio3" class="form-check-label">その他</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group row">
+                            <label for="select1" class="col-md-3 col-form-label">お問い合わせ種類<span class="badge badge-warning">必須</span></label>
+                            <div class="col-md-9">
+                                <select name="#" id="select1" class="form-control">
+                                    <option value="1">ご予約について</option>
+                                    <option value="2">委託販売について</option>
+                                    <option value="3">その他のお問い合わせ</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="textarea1" class="col-md-3 col-form-label">お問い合わせ内容<span class="badge badge-warning">必須</span></label>
+                            <div class="col-md-9">
+                                <textarea name="" id="textarea1" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-9">
+                                <button type="submit" class="btn btn-primary">確認する</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
         </div>
 
     </main>
